@@ -8,32 +8,11 @@
 <meta name="theme-color" content="#DCE6F6">
 <link rel="preload" href="assets/fonts/Manrope-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/hero-poster-v2.jpg" as="image">
-<link rel="stylesheet" href="css/styles.css?v=15">
+<link rel="stylesheet" href="css/styles.css?v=18">
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
 
-<header class="top">
-  <div class="top__brand">
-    <span class="top__name">Марина Солопова</span>
-    <span class="top__role">Веб-дизайнер</span>
-  </div>
-  <nav class="top__nav" aria-label="Основная навигация">
-    <ul>
-      <li><i>01</i>Проекты</li>
-      <li><i>02</i>Как работаю</li>
-      <li><i>03</i>Стоимость</li>
-      <li><i>04</i>Обо мне</li>
-      <li><i>05</i>Контакты</li>
-    </ul>
-  </nav>
-  <div class="top__side">
-    <span class="top__status"><span class="dot" aria-hidden="true"></span>Открыта к проектам</span>
-    <button class="burger" id="burgerBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню">
-      <span></span><span></span>
-    </button>
-  </div>
-</header>
 
 <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Меню" hidden>
   <div class="menu__top">
@@ -57,6 +36,27 @@
 
 <main id="main">
   <section class="hero" id="hero">
+    <header class="top">
+      <div class="top__brand">
+        <span class="top__name">Марина Солопова</span>
+        <span class="top__role">Веб-дизайнер</span>
+      </div>
+      <nav class="top__nav" aria-label="Основная навигация">
+        <ul>
+          <li><i>01</i>Проекты</li>
+          <li><i>02</i>Как работаю</li>
+          <li><i>03</i>Стоимость</li>
+          <li><i>04</i>Обо мне</li>
+          <li><i>05</i>Контакты</li>
+        </ul>
+      </nav>
+      <div class="top__side">
+        <span class="top__status"><span class="dot" aria-hidden="true"></span>Открыта к проектам</span>
+        <button class="burger" id="burgerBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню">
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
 
     <div class="hero__media">
       <video class="hero__video" id="heroVideo" poster="assets/img/hero-poster-v2.jpg" muted loop playsinline aria-hidden="true" tabindex="-1">
@@ -112,11 +112,6 @@
       <span class="finder__label finder__label--top">( автор )</span>
       <span class="finder__label finder__label--bottom">5+ лет в дизайне</span>
     </div>
-
-    <p class="eyebrow reveal" style="--i:0">
-      <svg class="spark" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>
-      <span>Сайты для компаний,<br>предпринимателей и&nbsp;специалистов</span>
-    </p>
 
     <h1 class="title title__a reveal" style="--i:1">Готовый сайт<br>для бизнеса</h1>
 
@@ -280,5 +275,5 @@
   <span id="next" class="visually-hidden" tabindex="-1">Дальше — кейс ГРИН РОК</span>
 </main>
 
-<script src="js/main.js?v=7"></script></body>
+<script src="js/main.js?v=10"></script></body>
 </html>
