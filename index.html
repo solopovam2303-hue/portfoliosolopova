@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#DCE6F6">
 <link rel="preload" href="assets/fonts/Manrope-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/hero-poster-v2.jpg" as="image">
-<link rel="stylesheet" href="css/styles.css?v=6">
+<link rel="stylesheet" href="css/styles.css?v=15">
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -29,7 +29,6 @@
   </nav>
   <div class="top__side">
     <span class="top__status"><span class="dot" aria-hidden="true"></span>Открыта к проектам</span>
-    <a class="btn btn--sm btn--glass" href="https://t.me/mariinasolopova" target="_blank" rel="noreferrer">Обсудить проект</a>
     <button class="burger" id="burgerBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="menu" aria-label="Открыть меню">
       <span></span><span></span>
     </button>
@@ -64,6 +63,7 @@
         <source src="assets/video/hero-loop-v2.mp4" type="video/mp4">
       </video>
       <div class="hero__shade" aria-hidden="true"></div>
+      <div class="dissolve" aria-hidden="true"></div>
       <div class="sweep" aria-hidden="true"></div>
       <div class="loadbar" aria-hidden="true"></div>
 
@@ -83,7 +83,7 @@
             <span style="--c:#6FB1EE"><i></i>6FB1EE</span>
             <span style="--c:#1F4FD8"><i></i>1F4FD8</span>
             <span style="--c:#0B1630"><i></i>0B1630</span>
-            <span style="--c:#D9BC8E"><i></i>D9BC8E</span>
+            <span style="--c:#C9F45B"><i></i>C9F45B</span>
           </div>
           <div class="parts"><span class="parts__btn">Кнопка</span><span class="parts__chip">Тег</span><span class="parts__cap">компоненты</span></div>
         </div>
@@ -120,12 +120,15 @@
 
     <h1 class="title title__a reveal" style="--i:1">Готовый сайт<br>для бизнеса</h1>
 
-    <ol class="stages reveal" style="--i:2" aria-label="Этапы работы">
+    <div class="stages reveal" style="--i:2">
+      <p class="stages__hint"><span class="stages__dot" aria-hidden="true"></span>Наведите на этап</p>
+      <ol class="stages__list" aria-label="Этапы работы">
       <li><button type="button" data-stage="1" data-cap="01 / Понимание рынка и клиента" aria-pressed="false" aria-label="Исследование: понимание рынка и клиента"><i>01</i><span>Исследование</span></button></li>
       <li><button type="button" data-stage="2" data-cap="02 / Структура и тексты" aria-pressed="false" aria-label="Содержание: структура и тексты"><i>02</i><span>Содержание</span></button></li>
       <li><button type="button" data-stage="3" data-cap="03 / Визуальный язык" aria-pressed="false" aria-label="Система: визуальный язык"><i>03</i><span>Система</span></button></li>
       <li><button type="button" data-stage="4" data-cap="04 / Работающий сайт" aria-pressed="false" aria-label="Реализация: работающий сайт"><i>04</i><span>Реализация</span></button></li>
-    </ol>
+      </ol>
+    </div>
 
     <div class="side">
       <p class="title__b reveal" style="--i:3">— от&nbsp;исследования ниши и&nbsp;стратегии сайта до&nbsp;текстов, дизайна, разработки и&nbsp;запуска</p>
@@ -142,7 +145,7 @@
 
     <div class="lower">
       <a class="case reveal" style="--i:5" href="#next" data-scroll>
-        <span class="case__meta"><span>Главный кейс</span><span>2026</span></span>
+        <span class="case__meta"><span>Последний кейс</span><span>2026</span></span>
         <span class="case__title">ГРИН РОК — от&nbsp;нового сайта к&nbsp;единой системе коммуникаций</span>
         <span class="case__go" aria-hidden="true">
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -154,6 +157,7 @@
         <li>Многостраничные сайты</li>
         <li>Сайты для бизнеса</li>
         <li>Переработка действующих сайтов</li>
+        <li>Визуальные системы</li>
       </ul>
     </div>
 
@@ -164,56 +168,117 @@
         <svg class="spark" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>
         Что входит в&nbsp;работу
       </p>
-      <p class="work__cap work__cap--dim">01—04</p>
+      <p class="work__cap work__cap--dim">( 01—04 )</p>
     </div>
-    <div class="work__body">
-      <h2 class="work__title" id="workTitle">Каждый этап даёт понятный результат&nbsp;— от&nbsp;исследования до&nbsp;работающего сайта</h2>
-      <ol class="steps">
-        <li class="step" style="--n:3">
-          <div class="step__top">
-            <span class="step__num">01</span>
-            <span class="step__name">/ Исследование</span>
-            <svg class="step__glyph" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="7"/><path d="M17.5 17.5 25 25M12 8.5v7M8.5 12h7"/></svg>
-          </div>
-          <h3 class="step__title">Понимание рынка<br>и&nbsp;клиента</h3>
-          <p class="step__text">Конкуренты, аудитория, критерии выбора, вопросы клиентов, выводы и&nbsp;рекомендации.</p>
-        </li>
-        <li class="step" style="--n:2">
-          <div class="step__top">
-            <span class="step__num">02</span>
-            <span class="step__name">/ Содержание</span>
-            <svg class="step__glyph" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="22" height="6" rx="1.5"/><rect x="3" y="14" width="10" height="10" rx="1.5"/><path d="M17 15.5h8M17 19.5h8M17 23.5h5"/></svg>
-          </div>
-          <h3 class="step__title">Структура<br>и&nbsp;тексты</h3>
-          <p class="step__text">Последовательность блоков, предложения, аргументы, тексты и&nbsp;интерактивный прототип.</p>
-        </li>
-        <li class="step" style="--n:1">
-          <div class="step__top">
-            <span class="step__num">03</span>
-            <span class="step__name">/ Система</span>
-            <svg class="step__glyph" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="11" r="6"/><circle cx="18" cy="11" r="6"/><circle cx="14" cy="18" r="6"/></svg>
-          </div>
-          <h3 class="step__title">Визуальный<br>язык</h3>
-          <p class="step__text">Дизайн-концепция, мобильные версии, компоненты, правила графики и&nbsp;исходные файлы.</p>
-        </li>
-        <li class="step" style="--n:0">
-          <div class="step__top">
-            <span class="step__num">04</span>
-            <span class="step__name">/ Реализация</span>
-            <svg class="step__glyph" width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="14" cy="14" r="11"/><path d="M10 18l8-8M18 10h-6M18 10v6"/></svg>
-          </div>
-          <h3 class="step__title">Работающий<br>сайт</h3>
-          <p class="step__text">Адаптивная реализация, проверка основных сценариев, публикация и&nbsp;передача доступов.</p>
-        </li>
-      </ol>
-      <aside class="keep">
+    <div class="work__intro">
+      <h2 class="work__title" id="workTitle">Каждый этап даёт понятный результат <span>—&nbsp;от&nbsp;исследования до&nbsp;работающего сайта</span></h2>
+      <div class="keep">
         <p class="keep__cap">Материалы остаются у&nbsp;вас</p>
-        <p class="keep__text">Исследование, тексты и&nbsp;визуальные решения можно использовать в&nbsp;презентациях, рекламе и&nbsp;коммерческих предложениях.</p>
-      </aside>
+        <p class="keep__text">Исследование, тексты и&nbsp;визуальные решения можно использовать и&nbsp;за&nbsp;пределами сайта.</p>
+        <ul class="keep__uses">
+          <li>Презентации</li>
+          <li>Реклама</li>
+          <li>Коммерческие предложения</li>
+        </ul>
+      </div>
     </div>
+
+    <ol class="cards" id="cards">
+      <li class="card is-open" style="--i:0; --bp:10% 62%; --tint:#7fa2d8; --lum:0.72" tabindex="0">
+        <div class="card__bg" aria-hidden="true"></div>
+        <div class="card__dots" aria-hidden="true"></div>
+        <div class="card__top">
+          <span class="card__name"><svg class="spark" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>Исследование</span>
+          <span class="card__num">01</span>
+        </div>
+        <div class="card__art" aria-hidden="true">
+          <div class="art art--radar">
+            <svg viewBox="0 0 220 220" fill="none" stroke="currentColor" stroke-width="1">
+              <circle cx="110" cy="110" r="104" opacity=".28"/>
+              <circle cx="110" cy="110" r="70" opacity=".4"/>
+              <circle cx="110" cy="110" r="36" opacity=".55"/>
+              <path d="M110 0v220M0 110h220" opacity=".18"/>
+              <path class="radar__sweep" d="M110 110V6"/>
+            </svg>
+            <span class="pin" style="left:63%; top:20%"><i></i>конкуренты</span>
+            <span class="pin" style="left:6%; top:44%"><i></i>аудитория</span>
+            <span class="pin" style="left:42%; top:72%"><i></i>критерии выбора</span>
+          </div>
+        </div>
+        <div class="card__bottom">
+          <h3 class="card__title"><span>Понимание рынка</span> и&nbsp;клиента</h3>
+          <div class="card__more"><p class="card__text">Конкуренты, аудитория, критерии выбора, вопросы клиентов, выводы и&nbsp;рекомендации.</p></div>
+        </div>
+      </li>
+
+      <li class="card" style="--i:1; --bp:88% 58%; --tint:#6f93cc; --lum:0.66" tabindex="0">
+        <div class="card__bg" aria-hidden="true"></div>
+        <div class="card__dots" aria-hidden="true"></div>
+        <div class="card__top">
+          <span class="card__name"><svg class="spark" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>Содержание</span>
+          <span class="card__num">02</span>
+        </div>
+        <div class="card__art" aria-hidden="true">
+          <div class="art art--page">
+            <div class="pg pg--h"><b></b><b></b></div>
+            <div class="pg pg--row"><i></i><i></i></div>
+            <div class="pg pg--t"><b></b><b></b><b></b></div>
+            <div class="pg pg--cta"><u></u></div>
+            <span class="pin pin--a"><i></i>оффер</span>
+            <span class="pin pin--b"><i></i>аргументы</span>
+            <span class="pin pin--c"><i></i>действие</span>
+          </div>
+        </div>
+        <div class="card__bottom">
+          <h3 class="card__title"><span>Структура</span> и&nbsp;тексты</h3>
+          <div class="card__more"><p class="card__text">Последовательность блоков, предложения, аргументы, тексты и&nbsp;интерактивный прототип.</p></div>
+        </div>
+      </li>
+
+      <li class="card" style="--i:2; --bp:20% 60%; --tint:#86b6f2; --lum:0.8" tabindex="0">
+        <div class="card__bg" aria-hidden="true"></div>
+        <div class="card__dots" aria-hidden="true"></div>
+        <div class="card__top">
+          <span class="card__name"><svg class="spark" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>Система</span>
+          <span class="card__num">03</span>
+        </div>
+        <div class="card__art" aria-hidden="true">
+          <div class="art art--tiles">
+            <span class="tile tile--s"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M1 7h18M1 13h18M7 1v18M13 1v18"/></svg></span>
+            <span class="tile tile--m"><em>Aa</em></span>
+            <span class="tile tile--l"><i style="background:#DCE6F6"></i><i style="background:#1F4FD8"></i><i style="background:#C9F45B"></i></span>
+            <span class="tile tile--m"><u>Кнопка</u></span>
+            <span class="tile tile--s"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2"><rect x="5.5" y="1" width="9" height="18" rx="2.5"/><path d="M9 16h2"/></svg></span>
+          </div>
+        </div>
+        <div class="card__bottom">
+          <h3 class="card__title"><span>Визуальный</span> язык</h3>
+          <div class="card__more"><p class="card__text">Дизайн-концепция, мобильные версии, компоненты, правила графики и&nbsp;исходные файлы.</p></div>
+        </div>
+      </li>
+
+      <li class="card" style="--i:3; --bp:72% 50%; --tint:#93b1de; --lum:0.74" tabindex="0">
+        <div class="card__bg" aria-hidden="true"></div>
+        <div class="card__dots" aria-hidden="true"></div>
+        <div class="card__top">
+          <span class="card__name"><svg class="spark" width="12" height="12" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>Реализация</span>
+          <span class="card__num">04</span>
+        </div>
+        <div class="card__art" aria-hidden="true">
+          <div class="art art--live">
+            <div class="toast"><i><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6.5 5 9l5-6"/></svg></i><p>Сайт опубликован<small>адаптив и&nbsp;сценарии проверены</small></p><time>12:00</time></div>
+            <div class="toast toast--2"><i><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"><circle cx="4" cy="6" r="2.5"/><path d="M6.5 6H11M9 6v2"/></svg></i><p>Доступы переданы<small>домен, хостинг, редактор</small></p><time>12:05</time></div>
+          </div>
+        </div>
+        <div class="card__bottom">
+          <h3 class="card__title"><span>Работающий</span> сайт</h3>
+          <div class="card__more"><p class="card__text">Адаптивная реализация, проверка основных сценариев, публикация и&nbsp;передача доступов.</p></div>
+        </div>
+      </li>
+    </ol>
   </section>
   <span id="next" class="visually-hidden" tabindex="-1">Дальше — кейс ГРИН РОК</span>
 </main>
 
-<script src="js/main.js?v=5"></script></body>
+<script src="js/main.js?v=7"></script></body>
 </html>

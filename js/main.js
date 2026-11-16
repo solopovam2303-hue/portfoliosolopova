@@ -170,17 +170,38 @@
     if (current === 3 || current === 4) snapPanels();
   });
 
-  /* ---- Блок «Что входит в работу»: появление при прокрутке ---- */
+  /* ---- Блок «Что входит в работу»: появление и раскрытие карточек ---- */
   var work = document.getElementById('work');
   if (work) {
+    var showWork = function () {
+      work.classList.add('in');
+      // после появления убираем задержки, чтобы карточки раскрывались сразу
+      setTimeout(function () { work.classList.add('ready'); }, reduceMotion ? 0 : 1500);
+    };
     if ('IntersectionObserver' in window && !reduceMotion) {
       var workObserver = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) { work.classList.add('in'); workObserver.disconnect(); }
+        if (entries[0].isIntersecting) { showWork(); workObserver.disconnect(); }
       }, { threshold: 0.18 });
       workObserver.observe(work);
     } else {
-      work.classList.add('in');
+      showWork();
     }
+
+    var cards = Array.prototype.slice.call(work.querySelectorAll('.card'));
+    var openCard = function (card) {
+      cards.forEach(function (c) { c.classList.toggle('is-open', c === card); });
+    };
+    cards.forEach(function (card) {
+      card.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') openCard(card); });
+      card.addEventListener('focus', function () { openCard(card); });
+      card.addEventListener('click', function () { openCard(card); });
+      // точки растра идут за курсором
+      card.addEventListener('pointermove', function (e) {
+        var r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+        card.style.setProperty('--my', (e.clientY - r.top) + 'px');
+      });
+    });
   }
 
   /* ---- Плавный переход к следующему блоку ---- */
