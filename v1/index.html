@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Марина Солопова — Веб-дизайнер</title>
+<meta name="description" content="Сайт начинается с исследования. Веб-дизайнер Марина Солопова.">
+<link rel="preload" href="assets/fonts/Manrope-ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hero-poster.jpg" as="image">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="header" id="header">
+  <div class="header__inner">
+    <div class="header__brand-group">
+      <span class="header__brand">Марина Солопова</span>
+      <span class="header__role">Веб-дизайнер</span>
+    </div>
+    <nav class="header__nav" aria-label="Основная навигация">
+      <ul class="header__nav-list">
+        <li>Работы</li><li>Подход</li><li>Стоимость</li><li>Обо мне</li><li>Контакты</li>
+      </ul>
+    </nav>
+    <a class="btn btn--primary header__cta" href="https://t.me/mariinasolopova" target="_blank" rel="noreferrer">Обсудить проект</a>
+    <button class="header__burger" id="burgerBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Мобильное меню" hidden>
+  <div class="mobile-menu__inner">
+    <div class="mobile-menu__top">
+      <span class="header__brand">Марина Солопова</span>
+      <button class="mobile-menu__close" id="closeMenuBtn" type="button" aria-label="Закрыть меню">
+        <span></span><span></span>
+      </button>
+    </div>
+    <ul class="mobile-menu__list">
+      <li>Работы</li><li>Подход</li><li>Стоимость</li><li>Обо мне</li><li>Контакты</li>
+    </ul>
+    <span class="mobile-menu__role">Веб-дизайнер</span>
+    <a class="btn btn--primary mobile-menu__cta" href="https://t.me/mariinasolopova" target="_blank" rel="noreferrer">Обсудить проект</a>
+  </div>
+</div>
+<main id="main">
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <video class="hero__video" id="heroVideo" poster="assets/img/hero-poster.jpg" muted loop playsinline aria-hidden="true" tabindex="-1">
+        <source src="assets/video/hero-loop-1080.webm" type="video/webm">
+        <source src="assets/video/hero-loop-1080.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__aura" aria-hidden="true"></div>
+    </div>
+    <div class="hero__content">
+      <h1 class="hero__title">Сайт начинается<br>с исследования</h1>
+      <p class="hero__description">Изучаю бизнес, рынок и клиентов, собираю структуру и тексты, создаю дизайн и веду проект до запуска.</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="https://t.me/mariinasolopova" target="_blank" rel="noreferrer">
+          Обсудить проект
+          <svg class="btn__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a class="link-arrow" href="#next" id="casesLink">
+          Смотреть кейсы
+          <svg class="link-arrow__icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+      <ul class="hero__chips">
+        <li class="chip">5+ лет в дизайне</li>
+        <li class="chip">Открыта к проектам</li>
+        <li class="chip">Сайт, приложения, AI-визуалы</li>
+      </ul>
+    </div>
+  </section>
+  <span id="next" class="visually-hidden" tabindex="-1">Дальше — последние проекты</span>
+</main>
+<script src="js/main.js"></script>
+</body>
+</html>
