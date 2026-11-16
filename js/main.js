@@ -124,6 +124,20 @@
     }
   }
 
+  // Плашки слоёв стоят в координатах видео и попадают на дробные пиксели — от этого текст мылится.
+  // Доводим каждую до целого физического пикселя.
+  function snapPanels() {
+    var dpr = window.devicePixelRatio || 1;
+    Array.prototype.forEach.call(document.querySelectorAll('.specimen, .swatches, .parts, .launch'), function (el) {
+      el.style.translate = '';
+      var r = el.getBoundingClientRect();
+      if (!r.width) return;
+      var dx = Math.round(r.left * dpr) / dpr - r.left;
+      var dy = Math.round(r.top * dpr) / dpr - r.top;
+      el.style.translate = dx + 'px ' + dy + 'px';
+    });
+  }
+
   function applyStage(n) {
     if (!hero) return;
     current = n;
@@ -135,6 +149,7 @@
       if (on && stageCap) stageCap.textContent = btn.getAttribute('data-cap');
     });
     if (n === 2) buildWire();
+    if (n === 3 || n === 4) snapPanels();
   }
 
   stageBtns.forEach(function (btn) {
@@ -150,7 +165,10 @@
   if (stageList) {
     stageList.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') applyStage(pinned); });
   }
-  window.addEventListener('resize', function () { if (current === 2) buildWire(); });
+  window.addEventListener('resize', function () {
+    if (current === 2) buildWire();
+    if (current === 3 || current === 4) snapPanels();
+  });
 
   /* ---- Блок «Что входит в работу»: появление при прокрутке ---- */
   var work = document.getElementById('work');
