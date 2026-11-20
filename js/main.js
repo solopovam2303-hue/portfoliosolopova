@@ -231,6 +231,109 @@
     });
   }
 
+  /* ---- Блок 3: стол с проектами ---- */
+  var desk = document.getElementById('case');
+  if (desk) {
+    var objs = Array.prototype.slice.call(desk.querySelectorAll('.obj'));
+    var stage = document.getElementById('deskStage');
+    var narrow = window.matchMedia('(max-width: 900px), (max-aspect-ratio: 23/20)');
+
+    if ('IntersectionObserver' in window && !reduceMotion) {
+      var deskObserver = new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting) { desk.classList.add('in'); deskObserver.disconnect(); }
+      }, { threshold: 0.12 });
+      deskObserver.observe(desk);
+      // на телефоне предметы появляются по одному при прокрутке
+      var objObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('is-seen'); objObserver.unobserve(e.target); } });
+      }, { threshold: 0.25 });
+      objs.forEach(function (o) { objObserver.observe(o); });
+    } else {
+      desk.classList.add('in');
+      objs.forEach(function (o) { o.classList.add('is-seen'); });
+    }
+
+    // предметы чуть смещаются за курсором, сам стол стоит на месте
+    if (stage && !reduceMotion) {
+      stage.addEventListener('pointermove', function (e) {
+        if (e.pointerType !== 'mouse' || narrow.matches) return;
+        var r = stage.getBoundingClientRect();
+        var x = (e.clientX - r.left) / r.width - 0.5;
+        objs.forEach(function (o, i) {
+          var k = 0.6 + (i % 3) * 0.25;
+          o.style.setProperty('--tx', (x * 10 * k).toFixed(1) + 'px');
+        });
+      });
+      stage.addEventListener('pointerleave', function () {
+        objs.forEach(function (o) { o.style.removeProperty('--tx'); });
+      });
+    }
+
+    // планшет Гардена: «до/после» идёт за курсором, на телефоне качается сам
+    var ba = desk.querySelector('.tablet__screen');
+    if (ba) {
+      ba.addEventListener('pointermove', function (e) {
+        if (e.pointerType !== 'mouse') return;
+        var r = ba.getBoundingClientRect();
+        ba.style.setProperty('--pos', Math.min(96, Math.max(4, (e.clientX - r.left) / r.width * 100)).toFixed(1) + '%');
+      });
+      if (!reduceMotion) {
+        var t0 = null, swayOn = false;
+        var sway = function (ts) {
+          if (!swayOn) return;
+          if (t0 === null) t0 = ts;
+          ba.style.setProperty('--pos', (50 + Math.sin((ts - t0) / 1400) * 30).toFixed(1) + '%');
+          requestAnimationFrame(sway);
+        };
+        if ('IntersectionObserver' in window) {
+          new IntersectionObserver(function (entries) {
+            var vis = entries[0].isIntersecting && narrow.matches;
+            if (vis && !swayOn) { swayOn = true; t0 = null; requestAnimationFrame(sway); } else if (!vis) swayOn = false;
+          }, { threshold: 0.4 }).observe(ba);
+        }
+      }
+    }
+
+    // раскрытие кейса
+    var sheet = document.getElementById('sheet');
+    var sheetBody = document.getElementById('sheetBody');
+    var sheetPanel = sheet ? sheet.querySelector('.sheet__panel') : null;
+    var sheetFrom = null;
+    var closeSheet = function () {
+      if (!sheet || sheet.hidden) return;
+      sheet.classList.remove('is-open');
+      document.documentElement.classList.remove('sheet-open');
+      document.removeEventListener('keydown', sheetKeys);
+      setTimeout(function () { sheet.hidden = true; sheetBody.textContent = ''; }, reduceMotion ? 0 : 600);
+      if (sheetFrom) sheetFrom.focus();
+    };
+    var sheetKeys = function (e) {
+      if (e.key === 'Escape') { e.preventDefault(); closeSheet(); return; }
+      if (e.key !== 'Tab') return;
+      var items = Array.prototype.slice.call(sheet.querySelectorAll('a[href], button:not([disabled])'));
+      if (!items.length) return;
+      var first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
+    var openSheet = function (obj) {
+      var tpl = document.getElementById('case-' + obj.getAttribute('data-case'));
+      if (!sheet || !tpl) return;
+      sheetFrom = obj;
+      sheetBody.textContent = '';
+      sheetBody.appendChild(tpl.content.cloneNode(true));
+      Array.prototype.forEach.call(sheetBody.querySelectorAll('video'), function (v) { if (!reduceMotion) { var pv = v.play(); if (pv && pv.catch) pv.catch(function () {}); } });
+      sheet.hidden = false;
+      sheetPanel.scrollTop = 0;
+      document.documentElement.classList.add('sheet-open');
+      requestAnimationFrame(function () { requestAnimationFrame(function () { sheet.classList.add('is-open'); }); });
+      sheetPanel.focus({ preventScroll: true });
+      document.addEventListener('keydown', sheetKeys);
+    };
+    objs.forEach(function (o) { o.addEventListener('click', function () { openSheet(o); }); });
+    if (sheet) Array.prototype.forEach.call(sheet.querySelectorAll('[data-close]'), function (el) { el.addEventListener('click', closeSheet); });
+  }
+
   /* ---- Плавный переход к следующему блоку ---- */
   Array.prototype.forEach.call(document.querySelectorAll('[data-scroll]'), function (link) {
     link.addEventListener('click', function (e) {

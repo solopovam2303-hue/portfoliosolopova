@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#DCE6F6">
 <link rel="preload" href="assets/fonts/Manrope-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/hero-poster-v2.jpg" as="image">
-<link rel="stylesheet" href="css/styles.css?v=18">
+<link rel="stylesheet" href="css/styles.css?v=32">
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -133,13 +133,13 @@
           <a class="btn" href="https://t.me/mariinasolopova" target="_blank" rel="noreferrer">Обсудить проект
             <svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a class="link" href="#next" data-scroll>Посмотреть кейсы</a>
+          <a class="link" href="#case" data-scroll>Посмотреть кейсы</a>
         </div>
       </div>
     </div>
 
     <div class="lower">
-      <a class="case reveal" style="--i:5" href="#next" data-scroll>
+      <a class="case reveal" style="--i:5" href="#case" data-scroll>
         <span class="case__meta"><span>Последний кейс</span><span>2026</span></span>
         <span class="case__title">ГРИН РОК — от&nbsp;нового сайта к&nbsp;единой системе коммуникаций</span>
         <span class="case__go" aria-hidden="true">
@@ -272,8 +272,168 @@
       </li>
     </ol>
   </section>
-  <span id="next" class="visually-hidden" tabindex="-1">Дальше — кейс ГРИН РОК</span>
+  <section class="desk" id="case" aria-labelledby="deskTitle" tabindex="-1">
+    <div class="desk__head">
+      <p class="desk__cap"><svg class="spark" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 0v14M0 7h14M2.05 2.05l9.9 9.9M11.95 2.05l-9.9 9.9" stroke="currentColor" stroke-width="1.2"/></svg>Последние проекты</p>
+      <p class="desk__cap desk__cap--dim">( 01—05 )</p>
+    </div>
+    <div class="desk__intro">
+      <h2 class="desk__title" id="deskTitle">Сайты, приложения <span>и&nbsp;цифровые продукты</span></h2>
+      <div class="desk__lead">
+        <p>Проекты с&nbsp;разными задачами: от&nbsp;сайта и&nbsp;мобильного приложения до&nbsp;интерфейсов рабочих инструментов.</p>
+        <p class="desk__hint"><i aria-hidden="true"></i>Возьмите предмет со&nbsp;стола, чтобы открыть кейс</p>
+      </div>
+    </div>
+
+    <div class="desk__stage" id="deskStage">
+      <div class="desk__surface" aria-hidden="true"></div>
+      <span class="deco deco--pencil" aria-hidden="true"></span>
+      <span class="deco deco--clip" aria-hidden="true"></span>
+      <span class="deco deco--confetti" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+
+      <button type="button" class="obj obj--folder" data-case="greenrock" style="--d:0; --r:-7deg">
+        <span class="obj__body">
+          <span class="folder__tab"></span>
+          <span class="folder__cover">
+            <svg class="folder__mark" viewBox="0 0 300 300" aria-hidden="true"><path fill="currentColor" d="M129.508 158.5V129H149.424V133.678H134.667V158.5H129.508ZM154.615 158.5V129H166.285C169.725 129 172.459 129.898 174.489 131.697C176.519 133.495 177.533 135.911 177.533 138.945C177.533 142.12 176.406 144.592 174.15 146.362C171.924 148.132 169.104 149.017 165.694 149.017H159.816V158.5H154.615ZM159.816 144.34H165.863C167.808 144.34 169.358 143.848 170.514 142.864C171.67 141.881 172.248 140.589 172.248 138.987C172.248 137.302 171.67 136.009 170.514 135.11C169.386 134.183 167.836 133.72 165.863 133.72H159.816V144.34ZM182.86 158.5V129H187.977V150.534L202.945 129H207.808V158.5H202.692V137.007L187.765 158.5H182.86ZM215.482 158.5V129H220.684V141.263H234.807V129H240.008V158.5H234.807V146.067H220.684V158.5H215.482Z"/><path fill="currentColor" d="M128.016 195.493V166.005H139.636C143.061 166.005 145.784 166.904 147.804 168.701C149.825 170.498 150.836 172.914 150.836 175.947C150.836 179.12 149.713 181.591 147.467 183.361C145.25 185.13 142.443 186.015 139.047 186.015H133.194V195.493H128.016ZM133.194 181.339H139.215C141.152 181.339 142.696 180.847 143.846 179.864C144.997 178.881 145.573 177.589 145.573 175.989C145.573 174.304 144.997 173.012 143.846 172.113C142.724 171.186 141.18 170.723 139.215 170.723H133.194V181.339ZM181.276 191.533C178.357 194.51 174.665 195.999 170.202 195.999C165.739 195.999 162.062 194.524 159.171 191.575C156.28 188.627 154.834 185.018 154.834 180.749C154.834 176.536 156.294 172.941 159.213 169.965C162.132 166.988 165.823 165.499 170.287 165.499C174.749 165.499 178.427 166.974 181.318 169.923C184.209 172.871 185.654 176.48 185.654 180.749C185.654 184.962 184.195 188.556 181.276 191.533ZM163.087 188.205C164.995 190.228 167.396 191.238 170.287 191.238C173.178 191.238 175.549 190.228 177.402 188.205C179.283 186.184 180.223 183.698 180.223 180.749C180.223 177.828 179.269 175.357 177.36 173.335C175.479 171.285 173.094 170.259 170.202 170.259C167.311 170.259 164.925 171.27 163.044 173.293C161.192 175.314 160.266 177.8 160.266 180.749C160.266 183.67 161.206 186.155 163.087 188.205ZM191.911 195.493V166.005H197.09V180.833L211.111 166.005H217.468L205.216 178.685L218.016 195.493H211.742L201.68 182.223L197.09 186.942V195.493H191.911Z"/><path fill="currentColor" d="M32.5156 29.499H171.907L261.516 113.741H116.435V276.499L32.5156 200.436V29.499Z"/></svg>
+            <span class="folder__line">Сайт ландшафтной компании</span>
+            <span class="folder__foot"><span>Сайт · Мерч · Презентации · Печать</span><span>2026</span></span>
+          </span>
+          <span class="folder__page"></span>
+        </span>
+        <span class="obj__tag">ГРИН РОК<small>сайт ландшафтной компании</small></span>
+      </button>
+
+      <button type="button" class="obj obj--phone" data-case="mestno" style="--d:1; --r:7deg">
+        <span class="obj__body">
+          <span class="phone__screen"><img src="assets/img/projects/mestno-screen-v2.jpg" width="923" height="2000" alt="" loading="lazy" decoding="async"></span>
+        </span>
+        <span class="obj__tag">Местно<small>мобильное приложение</small></span>
+      </button>
+
+      <button type="button" class="obj obj--tablet" data-case="garden" style="--d:2; --r:-3deg">
+        <span class="obj__body">
+          <span class="tablet__screen" style="--pos:50%">
+            <img class="ba ba--before" src="assets/img/projects/garden-before.jpg" width="1200" height="670" alt="" loading="lazy" decoding="async">
+            <img class="ba ba--after" src="assets/img/projects/garden-after.jpg" width="1200" height="670" alt="" loading="lazy" decoding="async">
+            <span class="ba__line"><span>↔</span></span>
+            <span class="ba__cap ba__cap--l">после</span><span class="ba__cap ba__cap--r">до</span>
+          </span>
+        </span>
+        <span class="obj__tag">Гарден<small>цифровой сервис</small></span>
+      </button>
+
+      <button type="button" class="obj obj--envelope" data-case="xii" style="--d:3; --r:5deg">
+        <span class="obj__body">
+          <span class="env__card"><img src="assets/img/projects/xii-site.jpg" width="800" height="500" alt="" loading="lazy" decoding="async"></span>
+          <span class="env__back"></span>
+          <span class="env__front"><span class="env__seal">XII</span><span class="env__to">здесь и&nbsp;сейчас</span></span>
+        </span>
+        <span class="obj__tag">XII<small>сайт агентства праздников</small></span>
+      </button>
+
+      <button type="button" class="obj obj--calc" data-case="calc" style="--d:4; --r:-11deg">
+        <span class="obj__body">
+          <span class="calc__display"><small>ваша реальная ставка</small>2&nbsp;531 <em>₽/час</em></span>
+          <span class="calc__keys"><i class="calc__k">C</i><i class="calc__k">±</i><i class="calc__k">%</i><i class="calc__k calc__op">÷</i><i class="calc__k">7</i><i class="calc__k">8</i><i class="calc__k">9</i><i class="calc__k calc__op">×</i><i class="calc__k">4</i><i class="calc__k">5</i><i class="calc__k">6</i><i class="calc__k calc__op">−</i><i class="calc__k">1</i><i class="calc__k">2</i><i class="calc__k">3</i><i class="calc__k calc__op">+</i><i class="calc__k calc__zero">0</i><i class="calc__k">.</i><i class="calc__k calc__eq">=</i></span>
+        </span>
+        <span class="obj__tag">Калькулятор<small>инструмент для фрилансеров</small></span>
+      </button>
+    </div>
+
+    <!-- Раскрытый кейс -->
+    <div class="sheet" id="sheet" hidden>
+      <div class="sheet__backdrop" data-close></div>
+      <div class="sheet__panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle" tabindex="-1">
+        <button type="button" class="sheet__close" data-close aria-label="Закрыть кейс">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 3l10 10M13 3L3 13"/></svg>
+        </button>
+        <div class="sheet__body" id="sheetBody"></div>
+      </div>
+    </div>
+
+    <template id="case-greenrock">
+      <div class="cs cs--greenrock" style="--tile:4 / 3">
+      <header class="cs__head">
+        <p class="cs__cap">Ландшафтная архитектура · Сайт ландшафтной компании</p>
+        <h3 class="cs__title" id="sheetTitle">ГРИН РОК <span>— от&nbsp;устаревшего сайта к&nbsp;единой системе коммуникаций</span></h3>
+        <div class="cs__lead"><p class="cs__intro">Студия проектирует и&nbsp;строит частные сады, общественные пространства и&nbsp;глэмпинги. Нужно было показать глубину её&nbsp;работы, а&nbsp;не&nbsp;ещё одного подрядчика по&nbsp;озеленению.</p><dl class="cs__meta"><div><dt>Клиент</dt><dd>ГРИН РОК</dd></div><div><dt>Формат</dt><dd>Сайт и&nbsp;система материалов</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
+      </header>
+      <figure class="cs__cover"><img src="assets/img/cases/gr-old.jpg" alt="Было: старый сайт" decoding="async"><figcaption>Было: старый сайт</figcaption></figure>
+      <div class="cs__cols">
+        <div class="cs__blocks"><div class="cs__block"><h4>Задача</h4><p>Старый сайт и&nbsp;презентации не&nbsp;показывали глубину работы студии. Компания выглядела как&nbsp;один из&nbsp;многих исполнителей по&nbsp;озеленению, а&nbsp;у&nbsp;клиента не&nbsp;складывалось ощущение, что&nbsp;за&nbsp;проектом стоит архитектурное бюро.</p></div><div class="cs__block"><h4>Решение</h4><p>Я&nbsp;исследовала конкурентов и&nbsp;аудиторию, пересобрала структуру и&nbsp;тексты, создала дизайн сайта и&nbsp;развила существующую айдентику во&nbsp;всех материалах: от&nbsp;коммерческого предложения до&nbsp;лент и&nbsp;табличек на&nbsp;объекте.</p></div><div class="cs__block"><h4>Результат</h4><p>Команда получила единый смысловой и&nbsp;визуальный язык. Стало проще раскрывать подход, показывать масштаб проектов и&nbsp;презентовать услуги клиентам.</p></div></div>
+        <div class="cs__done"><h4>Что я&nbsp;сделала</h4><ol><li>Исследование конкурентов и&nbsp;аудитории</li><li>Структура и&nbsp;тексты сайта</li><li>Дизайн сайта и&nbsp;мобильной версии</li><li>UI-kit и&nbsp;правила графики</li><li>Коммерческое предложение в&nbsp;виде журнала</li><li>Презентации и&nbsp;рабочая документация</li><li>Мерч и&nbsp;форма для&nbsp;команды</li><li>Носители для&nbsp;объектов</li><li>Контроль разработки</li></ol></div>
+      </div>
+      <section class="cs__group"><div class="cs__gh"><h4>Сайт</h4><p>Новый сайт рассказывает о&nbsp;подходе студии, показывает проекты и&nbsp;ведёт к&nbsp;заявке. Отдельно продумана мобильная версия.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig cs__fig--wide"><div class="cs__ph"><img src="assets/img/cases/gr-site-1.jpg" alt="Сайт на десктопе и телефоне" loading="lazy" decoding="async"></div><figcaption>Сайт на десктопе и телефоне</figcaption></figure><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-site-2.jpg" alt="Форма заявки" loading="lazy" decoding="async"></div><figcaption>Форма заявки</figcaption></figure><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-site-3.jpg" alt="Что вы получаете, работая с Грин Рок" loading="lazy" decoding="async"></div><figcaption>Что вы получаете, работая с Грин Рок</figcaption></figure></div></section><section class="cs__group"><div class="cs__gh"><h4>Коммерческое предложение</h4><p>Вместо сухого КП — журнал о&nbsp;проектах студии, который хочется листать и&nbsp;оставить себе.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-journal-1.jpg" alt="Разворот журнала" loading="lazy" decoding="async"></div><figcaption>Разворот журнала</figcaption></figure><figure class="cs__fig"><div class="cs__ph" style="--op:50% 50%"><img src="assets/img/cases/gr-journal-2.jpg" alt="Обложка журнала" loading="lazy" decoding="async"></div><figcaption>Обложка журнала</figcaption></figure></div></section><section class="cs__group"><div class="cs__gh"><h4>Презентации и документация</h4><p>Рабочие документы и&nbsp;презентации проектов в&nbsp;той же&nbsp;системе, что&nbsp;и&nbsp;сайт.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-docs.jpg" alt="Рабочая документация в фирменной коробке" loading="lazy" decoding="async"></div><figcaption>Рабочая документация в фирменной коробке</figcaption></figure><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-presentation.jpg" alt="Презентация проекта" loading="lazy" decoding="async"></div><figcaption>Презентация проекта</figcaption></figure></div></section><section class="cs__group"><div class="cs__gh"><h4>Мерч</h4><p>Худи и&nbsp;футболки для&nbsp;команды и&nbsp;клиентов: спокойная графика и&nbsp;фразы студии.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig"><div class="cs__ph" style="--op:50% 40%"><img src="assets/img/cases/gr-hoodie.jpg" alt="Худи" loading="lazy" decoding="async"></div><figcaption>Худи</figcaption></figure><figure class="cs__fig"><div class="cs__ph" style="--op:50% 35%"><img src="assets/img/cases/gr-tshirt.jpg" alt="Футболка" loading="lazy" decoding="async"></div><figcaption>Футболка</figcaption></figure></div></section><section class="cs__group"><div class="cs__gh"><h4>Носители на объектах</h4><p>Баннер, таблички и&nbsp;строительная лента: объект выглядит аккуратно и&nbsp;узнаваемо даже во&nbsp;время работ.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-banner.jpg" alt="Баннер о текущем этапе" loading="lazy" decoding="async"></div><figcaption>Баннер о текущем этапе</figcaption></figure><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-plantings.jpg" alt="Таблички «Новая посадка»" loading="lazy" decoding="async"></div><figcaption>Таблички «Новая посадка»</figcaption></figure><figure class="cs__fig"><div class="cs__ph"><img src="assets/img/cases/gr-tape.jpg" alt="Строительная лента" loading="lazy" decoding="async"></div><figcaption>Строительная лента</figcaption></figure></div></section>
+      <footer class="cs__foot"><ul class="cs__tags"><li>Исследование</li><li>Структура и тексты</li><li>Сайт</li><li>Мобильная версия</li><li>Презентации</li><li>Журнал</li><li>Мерч</li><li>Визуализации</li><li>Контроль разработки</li></ul><div class="cs__links"><a class="btn" href="https://www.behance.net/gallery/256735759/Green-Rock-Digital-Ecosystem-for-Landscape-Studio" target="_blank" rel="noreferrer">Полный проект на&nbsp;Behance<svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a><a class="link" href="https://green-rock.ru" target="_blank" rel="noreferrer">green-rock.ru</a></div></footer>
+      </div>
+    </template>
+    <template id="case-mestno">
+      <div class="cs cs--mestno" style="--tile:1 / 1">
+      <header class="cs__head">
+        <p class="cs__cap">Мобильное приложение · Досуг и мероприятия · AI</p>
+        <h3 class="cs__title" id="sheetTitle">Местно <span>—<br>городской гид в&nbsp;кармане</span></h3>
+        <div class="cs__lead"><p class="cs__intro">Приложение для&nbsp;поиска и&nbsp;бронирования локальных событий: концертов, лекций, прогулок, пробежек и&nbsp;встреч. Цель — дать быстрый персональный доступ к&nbsp;самым интересным событиям в&nbsp;городе.</p><dl class="cs__meta"><div><dt>Тип</dt><dd>iOS-приложение</dd></div><div><dt>Роль</dt><dd>UX/UI-дизайн</dd></div><div><dt>Год</dt><dd>2025</dd></div></dl></div>
+      </header>
+      <figure class="cs__cover"><img src="assets/img/cases/mestno-cover.jpg" alt="Обложка проекта" decoding="async"><figcaption>Обложка проекта</figcaption></figure>
+      <div class="cs__cols">
+        <div class="cs__blocks"><div class="cs__block"><h4>Проблема</h4><p>Люди перегружены информацией: соцсети, афиши, группы. Не&nbsp;хватает персонализации и&nbsp;нормальных фильтров, а&nbsp;бронировать неудобно.</p></div><div class="cs__block"><h4>Решение</h4><p>Персональные подборки, карта событий поблизости, быстрая покупка билета и&nbsp;интеграция с&nbsp;календарём. AI-помощник знает интересы и&nbsp;предлагает подходящие события.</p></div><div class="cs__block"><h4>Результат</h4><p>Путь от&nbsp;«чем заняться вечером» до&nbsp;билета — за&nbsp;несколько касаний и&nbsp;в&nbsp;одном приложении.</p></div></div>
+        <div class="cs__done"><h4>Что я&nbsp;сделала</h4><ol><li>Анализ проблемы и&nbsp;сценарии</li><li>Структура и&nbsp;вайрфреймы</li><li>Айдентика и&nbsp;визуальная система</li><li>Онбординг и&nbsp;выбор интересов</li><li>Главная, поиск и&nbsp;карта</li><li>AI-помощник</li><li>Карточка события и&nbsp;бронирование</li><li>Профиль и&nbsp;подборки</li><li>Прототип</li></ol></div>
+      </div>
+      <section class="cs__group"><div class="cs__gh"><h4>Айдентика и идея</h4><p>Яркий лаймовый акцент и&nbsp;знак «М» — приложение узнаётся с&nbsp;первого взгляда на&nbsp;экране телефона.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-3.jpg" alt="Айдентика и иконка" loading="lazy" decoding="async"></div><figcaption>Айдентика и иконка</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-5.jpg" alt="Проблема и решение" loading="lazy" decoding="async"></div><figcaption>Проблема и решение</figcaption></figure></div></section><section class="cs__group"><div class="cs__gh"><h4>Сценарии и экраны</h4><p>От&nbsp;онбординга и&nbsp;выбора интересов до&nbsp;карты, AI-помощника и&nbsp;карточки события.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-7.jpg" alt="Онбординг" loading="lazy" decoding="async"></div><figcaption>Онбординг</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-8.jpg" alt="Главная и карта" loading="lazy" decoding="async"></div><figcaption>Главная и карта</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-9.jpg" alt="AI-помощник" loading="lazy" decoding="async"></div><figcaption>AI-помощник</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-10.jpg" alt="Карточка события" loading="lazy" decoding="async"></div><figcaption>Карточка события</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-11.jpg" alt="Профиль и подборки" loading="lazy" decoding="async"></div><figcaption>Профиль и подборки</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-12.jpg" alt="Подписка" loading="lazy" decoding="async"></div><figcaption>Подписка</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/mestno-13.jpg" alt="Экраны приложения" loading="lazy" decoding="async"></div><figcaption>Экраны приложения</figcaption></figure></div></section>
+      <footer class="cs__foot"><ul class="cs__tags"><li>Сценарии</li><li>Структура</li><li>Интерфейс</li><li>Прототип</li></ul></footer>
+      </div>
+    </template>
+    <template id="case-garden">
+      <div class="cs cs--garden" style="--tile:4 / 5">
+      <header class="cs__head">
+        <p class="cs__cap">Цифровой сервис · Загородные участки</p>
+        <h3 class="cs__title" id="sheetTitle">Гарден <span>— покажем,<br>каким может стать ваш участок</span></h3>
+        <div class="cs__lead"><p class="cs__intro">Сервис для&nbsp;владельцев загородных домов: по&nbsp;фотографиям участка показывает варианты благоустройства, считает ориентировочный бюджет и&nbsp;помогает перейти к&nbsp;реализации. Главная мысль — не&nbsp;продавать дизайн, а&nbsp;помочь человеку принять решение о&nbsp;своём участке.</p><dl class="cs__meta"><div><dt>Тип</dt><dd>Веб-сервис</dd></div><div><dt>Роль</dt><dd>Исследование, UX/UI</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
+      </header>
+      <figure class="cs__cover cs__cover--tall"><img src="assets/img/projects/garden-landing.jpg" alt="Главная страница: первый экран и «как работает Гарден»" decoding="async"><figcaption>Главная страница: первый экран и «как работает Гарден»</figcaption></figure>
+      <div class="cs__cols">
+        <div class="cs__blocks"><div class="cs__block"><h4>Задача</h4><p>Провести человека по&nbsp;пути «у&nbsp;меня есть участок → покажите, что&nbsp;с&nbsp;ним можно сделать → получить проект» и&nbsp;проверить, готовы ли&nbsp;люди доверять AI вместе со&nbsp;специалистом и&nbsp;платить за&nbsp;результат.</p></div><div class="cs__block"><h4>Решение</h4><p>Вместо формы на&nbsp;25 вопросов — короткая анкета внутри продукта: фото, данные участка, стиль картинками, образ жизни, бюджет. Результат — концепция, «до/после» и&nbsp;смета по&nbsp;работам.</p></div><div class="cs__block"><h4>Юзерфлоу</h4><p>Сценарий из&nbsp;брифа на&nbsp;13 экранов сведён к&nbsp;10: однородные шаги объединены, ни&nbsp;одно нужное поле не&nbsp;потеряно.</p></div></div>
+        <div class="cs__done"><h4>Что я&nbsp;сделала</h4><ol><li>Исследование рынка и&nbsp;пяти референсов</li><li>Спецификация пилота и&nbsp;гипотезы</li><li>UX-архитектура и&nbsp;юзерфлоу</li><li>Текстовый вайрфрейм и&nbsp;контент</li><li>Логотип</li><li>Дизайн главной страницы</li><li>Анкета на&nbsp;5 шагов: десктоп и&nbsp;телефон</li><li>HTML-прототипы</li></ol></div>
+      </div>
+      <section class="cs__group"><div class="cs__gh"><h4>Главная страница</h4><p>Лендинг как&nbsp;продукт: «до/после», разбивка бюджета и&nbsp;уровни вложений вместо длинного рассказа о&nbsp;преимуществах.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig"><div class="cs__ph" style="--op:50% 0%"><img src="assets/img/projects/garden-main-2.jpg" alt="«До/после» и бюджет" loading="lazy" decoding="async"></div><figcaption>«До/после» и бюджет</figcaption></figure><figure class="cs__fig"><div class="cs__ph" style="--op:50% 0%"><img src="assets/img/projects/garden-main-1.jpg" alt="Как устроен сервис" loading="lazy" decoding="async"></div><figcaption>Как устроен сервис</figcaption></figure><figure class="cs__fig"><div class="cs__ph" style="--op:50% 0%"><img src="assets/img/projects/garden-main-3.jpg" alt="Уровни вложений и реализация" loading="lazy" decoding="async"></div><figcaption>Уровни вложений и реализация</figcaption></figure><figure class="cs__fig"><div class="cs__ph" style="--op:50% 0%"><img src="assets/img/projects/garden-form.jpg" alt="Анкета: десктоп и телефон" loading="lazy" decoding="async"></div><figcaption>Анкета: десктоп и телефон</figcaption></figure></div></section>
+      <footer class="cs__foot"><ul class="cs__tags"><li>Исследование</li><li>UX-архитектура</li><li>Юзерфлоу</li><li>Анкета</li><li>Интерфейс</li><li>Прототип</li></ul></footer>
+      </div>
+    </template>
+    <template id="case-xii">
+      <div class="cs cs--xii" style="--tile:16 / 8.4">
+      <header class="cs__head">
+        <p class="cs__cap">Сайт агентства праздников · Тула, Калуга, Москва</p>
+        <h3 class="cs__title" id="sheetTitle">XII <span>— организация свадеб и&nbsp;праздников</span></h3>
+        <div class="cs__lead"><p class="cs__intro">Агентство берёт на&nbsp;себя идею, сценарий, площадку, команду и&nbsp;координацию праздника. Около 80% заказов — свадьбы. Слоган — «Здесь и&nbsp;сейчас».</p><dl class="cs__meta"><div><dt>Тип</dt><dd>Сайт под&nbsp;ключ</dd></div><div><dt>Роль</dt><dd>От&nbsp;исследования до&nbsp;запуска</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
+      </header>
+      <figure class="cs__cover"><img src="assets/img/cases/xii-8.jpg" alt="Главный экран сайта" decoding="async"><figcaption>Главный экран сайта</figcaption></figure>
+      <div class="cs__cols">
+        <div class="cs__blocks"><div class="cs__block"><h4>Задача</h4><p>Собрать сайт, который отличает агентство от&nbsp;десятков организаторов с&nbsp;обещанием «идеальной свадьбы» и&nbsp;сразу ведёт к&nbsp;звонку или&nbsp;сообщению в&nbsp;Telegram.</p></div><div class="cs__block"><h4>Позиционирование</h4><p>После разбора аудитории и&nbsp;крупнейших агентств выбрали честную позицию: показываем, как&nbsp;всё&nbsp;устроено, и&nbsp;готовимся так, чтобы клиенту было приятно, а&nbsp;не&nbsp;страшно. Один человек отвечает за&nbsp;всё.</p></div><div class="cs__block"><h4>Решение</h4><p>Структура от&nbsp;праздников к&nbsp;подходу: форматы «Организация» и&nbsp;«Координация» с&nbsp;ценой от, 12 сфер, из&nbsp;которых складывается праздник, сценарий дня, рассказ об&nbsp;основательнице и&nbsp;частые вопросы. Тёмный праздничный дизайн с&nbsp;коралловым акцентом.</p></div><div class="cs__block"><h4>Результат</h4><p>Сайт опубликован на&nbsp;12agency.ru и&nbsp;работает на&nbsp;заявки.</p></div></div>
+        <div class="cs__done"><h4>Что я&nbsp;сделала</h4><ol><li>Исследование аудитории</li><li>Анализ конкурентов</li><li>Позиционирование</li><li>Структура и&nbsp;тексты</li><li>Концепции и&nbsp;прототип</li><li>Дизайн</li><li>Сборка и&nbsp;публикация</li></ol></div>
+      </div>
+      <section class="cs__group"><div class="cs__gh"><h4>Блоки сайта</h4><p>Каждый блок отвечает на&nbsp;вопрос клиента: что&nbsp;вы&nbsp;делаете, сколько стоит, кто за&nbsp;это&nbsp;отвечает.</p></div><div class="cs__grid cs__grid--2"><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-1.jpg" alt="12 месяцев, 12 сфер жизни" loading="lazy" decoding="async"></div><figcaption>12 месяцев, 12 сфер жизни</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-2.jpg" alt="Какие праздники организуем" loading="lazy" decoding="async"></div><figcaption>Какие праздники организуем</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-3.jpg" alt="Галерея праздников" loading="lazy" decoding="async"></div><figcaption>Галерея праздников</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-4.jpg" alt="Форматы и цены" loading="lazy" decoding="async"></div><figcaption>Форматы и цены</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-5.jpg" alt="Остальное мы берём на себя" loading="lazy" decoding="async"></div><figcaption>Остальное мы берём на себя</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-6.jpg" alt="12 сфер праздника" loading="lazy" decoding="async"></div><figcaption>12 сфер праздника</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/xii-7.jpg" alt="Финальный призыв и подвал" loading="lazy" decoding="async"></div><figcaption>Финальный призыв и подвал</figcaption></figure></div></section>
+      <footer class="cs__foot"><ul class="cs__tags"><li>Исследование</li><li>Позиционирование</li><li>Структура и тексты</li><li>Дизайн</li><li>Сайт</li></ul><div class="cs__links"><a class="btn" href="https://12agency.ru" target="_blank" rel="noreferrer">Открыть сайт<svg class="arr" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M11 3H4.5M11 3V9.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></footer>
+      </div>
+    </template>
+    <template id="case-calc">
+      <div class="cs cs--calc" style="--tile:16 / 10">
+      <header class="cs__head">
+        <p class="cs__cap">Цифровой инструмент · Для фрилансеров и креаторов</p>
+        <h3 class="cs__title" id="sheetTitle">Калькулятор <span>— сколько вы&nbsp;реально зарабатываете на&nbsp;проекте</span></h3>
+        <div class="cs__lead"><p class="cs__intro">Инструмент, который за&nbsp;секунду показывает реальную ставку в&nbsp;час: с&nbsp;учётом налога, расходов на&nbsp;сервисы и&nbsp;AI-генерации и&nbsp;времени, которое ушло на&nbsp;правки.</p><dl class="cs__meta"><div><dt>Тип</dt><dd>Веб-инструмент</dd></div><div><dt>Роль</dt><dd>Логика, интерфейс, сборка</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
+      </header>
+      <figure class="cs__cover"><img src="assets/img/cases/calc-v2-2.jpg" alt="Расчёт на примере проекта" decoding="async"><figcaption>Расчёт на примере проекта</figcaption></figure>
+      <div class="cs__cols">
+        <div class="cs__blocks"><div class="cs__block"><h4>Задача</h4><p>Фрилансеры считают доход «на&nbsp;глаз» и&nbsp;не&nbsp;видят, сколько на&nbsp;самом деле стоит их&nbsp;час после налогов, подписок и&nbsp;бесконечных правок.</p></div><div class="cs__block"><h4>Решение</h4><p>Слева — несколько полей ввода, справа — крупная реальная ставка и&nbsp;понятные карточки: чистый доход, маржинальность, доля правок, доход за&nbsp;день. Внизу — шкалы денег и&nbsp;времени и&nbsp;итог одной фразой, который можно скопировать.</p></div><div class="cs__block"><h4>Детали</h4><p>Кнопка «Заполнить пример» показывает расчёт без&nbsp;ввода, а&nbsp;все&nbsp;данные остаются в&nbsp;браузере пользователя.</p></div></div>
+        <div class="cs__done"><h4>Что я&nbsp;сделала</h4><ol><li>Логика расчёта</li><li>Структура полей и&nbsp;результата</li><li>Визуализация денег и&nbsp;времени</li><li>Текстовый итог</li><li>Адаптив для&nbsp;телефона</li><li>Сборка</li></ol></div>
+      </div>
+      <section class="cs__group"><div class="cs__gh"><h4>Десктоп</h4><p>Пустая форма и&nbsp;расчёт: путь от&nbsp;цифр проекта до&nbsp;понятного вывода.</p></div><div class="cs__grid cs__grid--2" style="--tile:1800 / 935"><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/calc-v2-1.jpg" alt="Пустая форма" loading="lazy" decoding="async"></div><figcaption>Пустая форма</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/calc-v2-2.jpg" alt="Расчёт на примере" loading="lazy" decoding="async"></div><figcaption>Расчёт на примере</figcaption></figure></div></section><section class="cs__group"><div class="cs__gh"><h4>Адаптив</h4><p>На&nbsp;узком экране форма и&nbsp;результат идут друг за&nbsp;другом, крупная ставка остаётся на&nbsp;виду.</p></div><div class="cs__grid cs__grid--2" style="--tile:1221 / 1800"><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/calc-v2-3.jpg" alt="Ввод данных" loading="lazy" decoding="async"></div><figcaption>Ввод данных</figcaption></figure><figure class="cs__fig cs__fig--contain"><div class="cs__ph"><img src="assets/img/cases/calc-v2-4.jpg" alt="Результат и итог" loading="lazy" decoding="async"></div><figcaption>Результат и итог</figcaption></figure></div></section>
+      <footer class="cs__foot"><ul class="cs__tags"><li>Логика</li><li>Интерфейс</li><li>Прототипирование</li><li>Сборка</li></ul></footer>
+      </div>
+    </template>
+  </section>
 </main>
 
-<script src="js/main.js?v=10"></script></body>
+<script src="js/main.js?v=16"></script></body>
 </html>
