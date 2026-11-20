@@ -675,8 +675,8 @@ html.sheet-open, html.sheet-open body { overflow: hidden; }
   .hero__media { order: 3; -webkit-mask-image: none; mask-image: none; }
   .hero__shade { background: linear-gradient(180deg, var(--sky) 0%, rgba(220, 230, 246, 0) 16%, rgba(10, 18, 38, 0) 64%, rgba(10, 18, 38, 0.7) 88%, var(--navy) 100%); }
   .hero > .stages { order: 4; position: relative; top: auto; left: auto; margin: -52px 0 0; padding: 0 var(--pad); }
-  .cta { order: 5; margin: 0; padding: 26px var(--pad) 0; background: var(--navy); flex-direction: column; gap: 18px; }
-  .lower { order: 6; margin-top: 0; padding-top: 22px; background: var(--navy); }
+  .cta { order: 5; margin: 0; padding: 40px var(--pad) 0; background: var(--navy); flex-direction: column; gap: 18px; }
+  .lower { order: 6; margin-top: 0; padding-top: 44px; gap: 44px; background: var(--navy); }
   .desk__hint { font-size: 0.625rem; letter-spacing: 0.06em; white-space: nowrap; }
   .card__text { max-width: none; text-wrap: pretty; }
   /* направления: три аккуратные строки */

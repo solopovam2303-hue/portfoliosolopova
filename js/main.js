@@ -105,7 +105,9 @@
     var topLine = null;   // верх рамки «Заголовок» — по нему выравнивается «Визуал»
     // на телефоне заголовок и описание — одна рамка «Оффер», по самому тексту, без отступов блока
     var stacked = getComputedStyle(hero).display !== 'grid';
-    var parts = stacked ? [['.title__a, .title__b', 'Оффер']].concat(WIRE_PARTS.slice(2)) : WIRE_PARTS;
+    var parts = stacked ? [['.title__a, .title__b', 'Оффер'], ['.cta__text, .cta__actions', 'Аргумент и действие']].concat(WIRE_PARTS.slice(3)) : WIRE_PARTS;
+    var side = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--pad')) || 20;
+    side = Math.min(side, hero.querySelector('.case') ? hero.querySelector('.case').getBoundingClientRect().left - base.left : side);
     parts.forEach(function (part) {
       var l = Infinity, t = Infinity, r = -Infinity, b = -Infinity;
       Array.prototype.forEach.call(hero.querySelectorAll(part[0]), function (el) {
@@ -116,6 +118,8 @@
       });
       if (l === Infinity) return;
       if (topLine === null) topLine = t - pad;
+      // на телефоне все рамки одной ширины: по краям текста страницы
+      if (stacked) { l = base.left + side; r = base.right - side; t -= 13; b += 2; }
       addBox(Math.max(l - pad, base.left + 4), t - pad, Math.min(r + pad, base.right - 4), b + pad, part[1], base);
     });
     // Блок «Визуал» — вокруг головы в кадре (видео: cover, прижато к верху)
