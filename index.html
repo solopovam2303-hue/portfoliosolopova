@@ -8,7 +8,7 @@
 <meta name="theme-color" content="#DCE6F6">
 <link rel="preload" href="assets/fonts/Manrope-ExtraLight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/img/hero-poster-v2.jpg" as="image">
-<link rel="stylesheet" href="css/styles.css?v=32">
+<link rel="stylesheet" href="css/styles.css?v=34">
 </head>
 <body>
 <a class="skip-link" href="#main">Перейти к содержимому</a>
@@ -63,7 +63,6 @@
         <source src="assets/video/hero-loop-v2.mp4" type="video/mp4">
       </video>
       <div class="hero__shade" aria-hidden="true"></div>
-      <div class="dissolve" aria-hidden="true"></div>
       <div class="sweep" aria-hidden="true"></div>
       <div class="loadbar" aria-hidden="true"></div>
 
@@ -193,8 +192,8 @@
               <circle cx="110" cy="110" r="70" opacity=".4"/>
               <circle cx="110" cy="110" r="36" opacity=".55"/>
               <path d="M110 0v220M0 110h220" opacity=".18"/>
-              <path class="radar__sweep" d="M110 110V6"/>
             </svg>
+            <span class="radar__arm" aria-hidden="true"></span>
             <span class="pin" style="left:63%; top:20%"><i></i>конкуренты</span>
             <span class="pin" style="left:6%; top:44%"><i></i>аудитория</span>
             <span class="pin" style="left:42%; top:72%"><i></i>критерии выбора</span>
@@ -355,7 +354,7 @@
     <template id="case-greenrock">
       <div class="cs cs--greenrock" style="--tile:4 / 3">
       <header class="cs__head">
-        <p class="cs__cap">Ландшафтная архитектура · Сайт ландшафтной компании</p>
+        <p class="cs__cap">Ландшафтная&nbsp;архитектура · Сайт&nbsp;ландшафтной&nbsp;компании</p>
         <h3 class="cs__title" id="sheetTitle">ГРИН РОК <span>— от&nbsp;устаревшего сайта к&nbsp;единой системе коммуникаций</span></h3>
         <div class="cs__lead"><p class="cs__intro">Студия проектирует и&nbsp;строит частные сады, общественные пространства и&nbsp;глэмпинги. Нужно было показать глубину её&nbsp;работы, а&nbsp;не&nbsp;ещё одного подрядчика по&nbsp;озеленению.</p><dl class="cs__meta"><div><dt>Клиент</dt><dd>ГРИН РОК</dd></div><div><dt>Формат</dt><dd>Сайт и&nbsp;система материалов</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
       </header>
@@ -371,7 +370,7 @@
     <template id="case-mestno">
       <div class="cs cs--mestno" style="--tile:1 / 1">
       <header class="cs__head">
-        <p class="cs__cap">Мобильное приложение · Досуг и мероприятия · AI</p>
+        <p class="cs__cap">Мобильное&nbsp;приложение · Досуг&nbsp;и&nbsp;мероприятия · AI</p>
         <h3 class="cs__title" id="sheetTitle">Местно <span>—<br>городской гид в&nbsp;кармане</span></h3>
         <div class="cs__lead"><p class="cs__intro">Приложение для&nbsp;поиска и&nbsp;бронирования локальных событий: концертов, лекций, прогулок, пробежек и&nbsp;встреч. Цель — дать быстрый персональный доступ к&nbsp;самым интересным событиям в&nbsp;городе.</p><dl class="cs__meta"><div><dt>Тип</dt><dd>iOS-приложение</dd></div><div><dt>Роль</dt><dd>UX/UI-дизайн</dd></div><div><dt>Год</dt><dd>2025</dd></div></dl></div>
       </header>
@@ -387,7 +386,7 @@
     <template id="case-garden">
       <div class="cs cs--garden" style="--tile:4 / 5">
       <header class="cs__head">
-        <p class="cs__cap">Цифровой сервис · Загородные участки</p>
+        <p class="cs__cap">Цифровой&nbsp;сервис · Загородные&nbsp;участки</p>
         <h3 class="cs__title" id="sheetTitle">Гарден <span>— покажем,<br>каким может стать ваш участок</span></h3>
         <div class="cs__lead"><p class="cs__intro">Сервис для&nbsp;владельцев загородных домов: по&nbsp;фотографиям участка показывает варианты благоустройства, считает ориентировочный бюджет и&nbsp;помогает перейти к&nbsp;реализации. Главная мысль — не&nbsp;продавать дизайн, а&nbsp;помочь человеку принять решение о&nbsp;своём участке.</p><dl class="cs__meta"><div><dt>Тип</dt><dd>Веб-сервис</dd></div><div><dt>Роль</dt><dd>Исследование, UX/UI</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
       </header>
@@ -403,7 +402,7 @@
     <template id="case-xii">
       <div class="cs cs--xii" style="--tile:16 / 8.4">
       <header class="cs__head">
-        <p class="cs__cap">Сайт агентства праздников · Тула, Калуга, Москва</p>
+        <p class="cs__cap">Сайт&nbsp;агентства&nbsp;праздников · Тула,&nbsp;Калуга,&nbsp;Москва</p>
         <h3 class="cs__title" id="sheetTitle">XII <span>— организация свадеб и&nbsp;праздников</span></h3>
         <div class="cs__lead"><p class="cs__intro">Агентство берёт на&nbsp;себя идею, сценарий, площадку, команду и&nbsp;координацию праздника. Около 80% заказов — свадьбы. Слоган — «Здесь и&nbsp;сейчас».</p><dl class="cs__meta"><div><dt>Тип</dt><dd>Сайт под&nbsp;ключ</dd></div><div><dt>Роль</dt><dd>От&nbsp;исследования до&nbsp;запуска</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
       </header>
@@ -419,7 +418,7 @@
     <template id="case-calc">
       <div class="cs cs--calc" style="--tile:16 / 10">
       <header class="cs__head">
-        <p class="cs__cap">Цифровой инструмент · Для фрилансеров и креаторов</p>
+        <p class="cs__cap">Цифровой&nbsp;инструмент · Для&nbsp;фрилансеров&nbsp;и&nbsp;креаторов</p>
         <h3 class="cs__title" id="sheetTitle">Калькулятор <span>— сколько вы&nbsp;реально зарабатываете на&nbsp;проекте</span></h3>
         <div class="cs__lead"><p class="cs__intro">Инструмент, который за&nbsp;секунду показывает реальную ставку в&nbsp;час: с&nbsp;учётом налога, расходов на&nbsp;сервисы и&nbsp;AI-генерации и&nbsp;времени, которое ушло на&nbsp;правки.</p><dl class="cs__meta"><div><dt>Тип</dt><dd>Веб-инструмент</dd></div><div><dt>Роль</dt><dd>Логика, интерфейс, сборка</dd></div><div><dt>Год</dt><dd>2026</dd></div></dl></div>
       </header>
@@ -435,5 +434,5 @@
   </section>
 </main>
 
-<script src="js/main.js?v=16"></script></body>
+<script src="js/main.js?v=17"></script></body>
 </html>

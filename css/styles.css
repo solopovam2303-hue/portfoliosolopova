@@ -90,19 +90,12 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .hero > *, .lower > * { position: relative; z-index: 2; }
 .hero > .top { position: absolute; z-index: 50; }
 /* главный экран стоит на месте, следующий блок наезжает поверх (--stick и --p задаёт скрипт) */
-.js .hero { position: sticky; top: var(--stick, 0px); }
-.hero::after { content: ''; position: absolute; inset: 0; z-index: 60; pointer-events: none; background: var(--navy); opacity: calc(var(--p, 0) * 0.5); }
 
 .hero__media { position: absolute; inset: 0; z-index: 0; }
 .hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
 .hero__shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(220, 230, 246, 0.55) 0%, rgba(220, 230, 246, 0) 16%, rgba(10, 18, 38, 0) 62%, rgba(10, 18, 38, 0.42) 100%); }
 
 /* Рамка-видоискатель вокруг лица */
-/* при прокрутке нижний край кадра размывается и растворяется (--p задаёт скрипт) */
-.dissolve { position: absolute; left: 0; right: 0; bottom: 0; height: 46%; pointer-events: none; opacity: var(--p, 0);
-  background: linear-gradient(180deg, rgba(10, 18, 38, 0) 0%, rgba(10, 18, 38, 0.35) 55%, rgba(10, 18, 38, 0.92) 100%);
-  -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
-  -webkit-mask-image: linear-gradient(180deg, transparent 0%, #000 62%); mask-image: linear-gradient(180deg, transparent 0%, #000 62%); }
 .finder { position: absolute; z-index: 1; left: calc(50vw - 0.12 * var(--vidw)); width: calc(0.25 * var(--vidw)); top: calc(var(--hero-top) + 26px); height: calc(0.665 * var(--vidh) - var(--hero-top) - 26px); pointer-events: none; opacity: 0; animation: fade 900ms var(--ease) 700ms forwards; }
 .finder__c { position: absolute; width: 14px; height: 14px; border: 0 solid var(--ink); opacity: 0.55; }
 .finder__c--tl { left: 0; top: 0; border-left-width: 1px; border-top-width: 1px; }
@@ -232,7 +225,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .tags li { flex: 1 1 auto; text-align: center; padding: 6px 10px; font-size: 0.5625rem; border-radius: 999px; color: var(--ink); background: var(--glass); border: 1px solid var(--glass-line); -webkit-backdrop-filter: blur(14px) saturate(1.2); backdrop-filter: blur(14px) saturate(1.2); white-space: nowrap; }
 
 /* ---------- Блок 2: «Что входит в работу» — карточки этапов ---------- */
-.work { position: relative; z-index: 5; border-radius: clamp(22px, 2.6vw, 36px) clamp(22px, 2.6vw, 36px) 0 0; background: var(--navy); color: var(--paper); padding: clamp(64px, 8vw, 120px) var(--pad) clamp(48px, 6vw, 88px); overflow: hidden; --w-line: rgba(246, 248, 252, 0.16); --w-dim: rgba(246, 248, 252, 0.55); }
+.work { position: relative; z-index: 5; background: var(--navy); color: var(--paper); padding: clamp(64px, 8vw, 120px) var(--pad) clamp(48px, 6vw, 88px); overflow: hidden; --w-line: rgba(246, 248, 252, 0.16); --w-dim: rgba(246, 248, 252, 0.55); }
 .work::before { content: ''; position: absolute; right: -12%; top: -30%; width: 62vw; height: 62vw; max-width: 900px; max-height: 900px; background: radial-gradient(circle, rgba(63, 120, 255, 0.22) 0%, rgba(63, 120, 255, 0.07) 45%, rgba(63, 120, 255, 0) 70%); pointer-events: none; }
 .work > * { position: relative; }
 .work__head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid var(--w-line); margin-bottom: clamp(28px, 3.4vw, 48px); }
@@ -291,8 +284,9 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 
 .art--radar { width: 220px; height: 220px; }
 .art--radar svg { display: block; width: 100%; height: 100%; color: var(--paper); }
-.radar__sweep { transform-origin: 110px 110px; stroke: var(--lime); stroke-width: 1.4; opacity: 1; animation: radar 6s linear infinite; animation-play-state: paused; }
-.card.is-open .radar__sweep { animation-play-state: running; }
+.art--radar { position: relative; }
+.radar__arm { position: absolute; left: calc(50% - 0.7px); top: 3%; width: 1.4px; height: 47%; border-radius: 1px; background: var(--lime); transform-origin: 50% 100%; animation: radar 6s linear infinite; animation-play-state: paused; }
+.card.is-open .radar__arm { animation-play-state: running; }
 @keyframes radar { to { transform: rotate(360deg); } }
 
 .art--page { width: 204px; display: grid; gap: 7px; }
@@ -506,6 +500,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 .cs__tags li::before { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--ink); }
 .cs__links { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 26px; }
 html.sheet-open, html.sheet-open body { overflow: hidden; }
+.sheet .link { color: var(--ink); }
 .sheet .btn { background: var(--ink); color: var(--paper); border: 0; }
 
 /* планшет и телефон: стол превращается в ленту предметов */
@@ -534,6 +529,7 @@ html.sheet-open, html.sheet-open body { overflow: hidden; }
   .calc__display { font-size: 4.8cqw; padding: 2cqw 2.4cqw; border-radius: 2.6cqw; } .calc__display small { font-size: 1.6cqw; } .calc__display em { font-size: 2.4cqw; }
   .calc__keys { gap: 1.2cqw; } .calc__keys i { border-radius: 1.6cqw; font-size: 2.6cqw; }
   .js .desk .obj { --ty: 10cqw; }
+  .obj--calc { --r: -2deg !important; } .obj--envelope { --r: 2deg !important; } .obj--folder { --r: -4deg !important; } .obj--phone { --r: 4deg !important; }
   .js .desk.in .obj:not(.is-seen) { opacity: 0; --ty: 10cqw; }
   .js .desk.in .obj.is-seen { transition-delay: 0s; }
   .sheet__panel { top: auto; left: 0; right: 0; bottom: 0; width: 100%; max-height: 94svh; border-radius: 24px 24px 0 0; opacity: 1; transform: translateY(100%); }

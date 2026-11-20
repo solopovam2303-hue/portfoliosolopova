@@ -170,33 +170,6 @@
     if (current === 3 || current === 4) snapPanels();
   });
 
-  /* ---- Переход: главный экран стоит, второй блок наезжает поверх ---- */
-  var nextBlock = document.getElementById('work');
-  if (hero && nextBlock) {
-    // высокий экран (телефон) закрепляется, когда докручен до низа
-    var setStick = function () {
-      hero.style.setProperty('--stick', Math.min(0, window.innerHeight - hero.offsetHeight) + 'px');
-    };
-    setStick();
-    window.addEventListener('resize', setStick);
-    if ('ResizeObserver' in window) new ResizeObserver(setStick).observe(hero);
-
-    if (!reduceMotion) {
-      var ticking = false;
-      // --p: насколько второй блок уже закрыл экран (0…1) — кадр размывается и темнеет
-      var updateCover = function () {
-        ticking = false;
-        var vh = window.innerHeight;
-        var p = Math.min(1, Math.max(0, (vh - nextBlock.getBoundingClientRect().top) / (vh * 0.7)));
-        hero.style.setProperty('--p', p.toFixed(3));
-      };
-      window.addEventListener('scroll', function () {
-        if (!ticking) { ticking = true; requestAnimationFrame(updateCover); }
-      }, { passive: true });
-      updateCover();
-    }
-  }
-
   /* ---- Блок «Что входит в работу»: появление и раскрытие карточек ---- */
   var work = document.getElementById('work');
   if (work) {
