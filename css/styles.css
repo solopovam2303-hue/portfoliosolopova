@@ -88,7 +88,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 /* ---------- Hero: десктоп (текст по сторонам от героини) ---------- */
 .hero { position: relative; min-height: max(100svh, 620px); display: grid; grid-template-columns: var(--zl) minmax(0, 1fr) var(--zr); grid-template-rows: auto auto auto 1fr auto; column-gap: 0; padding: var(--hero-top) var(--pad) 28px; overflow: hidden; }
 .hero > *, .lower > * { position: relative; z-index: 2; }
-.hero > .top { position: absolute; z-index: 50; }
+.hero > .top { position: absolute; z-index: 50; color: var(--ink); }
 /* главный экран стоит на месте, следующий блок наезжает поверх (--stick и --p задаёт скрипт) */
 
 .hero__media { position: absolute; inset: 0; z-index: 0; }
