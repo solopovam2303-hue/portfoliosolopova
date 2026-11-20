@@ -103,10 +103,14 @@
     var base = hero.getBoundingClientRect();
     var pad = 9;
     var topLine = null;   // верх рамки «Заголовок» — по нему выравнивается «Визуал»
-    WIRE_PARTS.forEach(function (part) {
+    // на телефоне заголовок и описание — одна рамка «Оффер», по самому тексту, без отступов блока
+    var stacked = getComputedStyle(hero).display !== 'grid';
+    var parts = stacked ? [['.title__a, .title__b', 'Оффер']].concat(WIRE_PARTS.slice(2)) : WIRE_PARTS;
+    parts.forEach(function (part) {
       var l = Infinity, t = Infinity, r = -Infinity, b = -Infinity;
       Array.prototype.forEach.call(hero.querySelectorAll(part[0]), function (el) {
         var rc = el.getBoundingClientRect();
+        if (stacked && /title__/.test(el.className)) { var rg = document.createRange(); rg.selectNodeContents(el); rc = rg.getBoundingClientRect(); }
         if (!rc.width) return;
         l = Math.min(l, rc.left); t = Math.min(t, rc.top); r = Math.max(r, rc.right); b = Math.max(b, rc.bottom);
       });
