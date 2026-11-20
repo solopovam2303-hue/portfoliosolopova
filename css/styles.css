@@ -269,6 +269,7 @@ html.menu-open, html.menu-open body { overflow: hidden; }
 
 .card__title { margin: 0; font-weight: 300; font-size: clamp(1.0625rem, 1.5vw, 1.625rem); line-height: 1.12; letter-spacing: -0.02em; }
 .card__title span { display: block; color: rgba(246, 248, 252, 0.6); white-space: nowrap; }
+.br-m { display: none; }
 .card__more { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows 620ms var(--ease), opacity 300ms var(--ease); }
 .card__more > * { overflow: hidden; min-height: 0; }
 .card.is-open .card__more { grid-template-rows: 1fr; opacity: 1; transition: grid-template-rows 620ms var(--ease), opacity 500ms var(--ease) 260ms; }
@@ -505,6 +506,8 @@ html.sheet-open, html.sheet-open body { overflow: hidden; }
 
 /* планшет и телефон: стол превращается в ленту предметов */
 @media (max-width: 900px), (max-aspect-ratio: 23/20) {
+  .br-m { display: inline; }
+  .work__title span { display: inline; }
   .desk__intro { flex-direction: column; gap: 18px; }
   .desk__lead { width: auto; max-width: 440px; margin-top: 0; }
   .desk__stage { height: auto; display: flex; flex-direction: column; align-items: center; gap: 22vw; padding: 14vw 0 22vw; perspective: none; }
@@ -535,6 +538,9 @@ html.sheet-open, html.sheet-open body { overflow: hidden; }
   .sheet__panel { top: auto; left: 0; right: 0; bottom: 0; width: 100%; max-height: 94svh; border-radius: 24px 24px 0 0; opacity: 1; transform: translateY(100%); }
   .sheet.is-open .sheet__panel { transform: none; }
   .cs__head, .cs__cols, .cs__gh { grid-template-columns: 1fr; }
+  .cs__title { font-size: 1.5rem; }
+  .cs--calc .cs__title { white-space: nowrap; }
+  .sheet__body { padding: 24px 20px; }
   .cs__lead { grid-column: 1; grid-row: auto; margin-top: 18px; }
   .cs__grid--2, .cs__grid--3 { grid-template-columns: 1fr; }
 }
@@ -640,6 +646,8 @@ html.sheet-open, html.sheet-open body { overflow: hidden; }
 }
 
 @media (max-width: 1180px), (max-aspect-ratio: 23/20) {
+  .card__title span { display: inline; }
+  .card__title { white-space: nowrap; }
   .card__text { text-wrap: wrap; }
   .cards { display: grid; grid-template-columns: 1fr 1fr; height: auto; }
   .card { min-height: 420px; }
