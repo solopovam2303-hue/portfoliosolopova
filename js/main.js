@@ -68,6 +68,20 @@
     });
   }
 
+  /* ---- Линия под заголовком — ровно по ширине текста заголовка ---- */
+  var titleA = document.querySelector('.title__a');
+  var stagesBox = document.querySelector('.hero > .stages');
+  function fitStagesLine() {
+    if (!titleA || !stagesBox) return;
+    var grid = getComputedStyle(document.getElementById('hero')).display === 'grid';
+    if (!grid) { stagesBox.style.width = ''; return; }
+    var rg = document.createRange(); rg.selectNodeContents(titleA);
+    stagesBox.style.width = Math.ceil(rg.getBoundingClientRect().width) + 'px';
+  }
+  fitStagesLine();
+  window.addEventListener('resize', fitStagesLine);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitStagesLine);
+
   /* ---- Этапы 01–04 меняют кадр ---- */
   var hero = document.getElementById('hero');
   var stageBtns = Array.prototype.slice.call(document.querySelectorAll('[data-stage]'));
